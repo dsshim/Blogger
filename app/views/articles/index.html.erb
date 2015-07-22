@@ -1,0 +1,6 @@
+<% @articles.map do |article| %>
+<strong><%= link_to(article.title, article_path(article.id), class: "article_title", id: "article_#{article.id}") %></strong><br>
+<%=article.body%><br><br>
+<%end%>
+
+<%= link_to "Create a New Article", new_article_path, class: "new_article" %>
